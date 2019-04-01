@@ -140,19 +140,23 @@ img{
     margin: 0;
 }
 
-.news__avartar{
-    float: left;
-}
+
 
 .prices__block-text{
     float: left;
     width: 250px;
-    padding: 10px;
-    text-align: center;
-    outline: 1px solid red;
-    box-sizing: border-box;
     margin-right: 16px;
-    
+}
+
+.price__item{
+    padding: 40px 10px 0 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.prices__block-border{
+    border: 1px solid #e8e9ed;
+    border-radius: 5px;
 }
 
 .price-icon-circle {
@@ -164,7 +168,7 @@ img{
     text-align: center;
     line-height: 89px;
 }
-.route__base-name{
+.route__base-name {
     font-size: 49px;
     font-weight: bold;
     margin-bottom: 36px;
@@ -203,9 +207,172 @@ img{
     font-weight: 400;
     font-size: 53.89px;
     margin-top: 20px;
+    margin-bottom: 30px;
 
 }
 
 .price-text small {
     font-size: 65%;
 }
+
+
+
+.news__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.news__avatar{
+    float: left;
+    margin-right: 17px;
+}
+
+.clearfix-append:after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+.section__title {
+    margin-top: 60px;
+    margin-bottom: 70px;
+    font-size: 49px;
+    font-weight: bold;
+}
+
+.news__item{
+    margin-bottom: 58px;
+}
+
+.news__date{
+    font-size: 14px;
+    font-weight: 300;
+    color: #656464;
+}
+
+.news__heading{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.news__desc-text{
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 12px;
+}
+
+.pagination{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pagination__display, .pagination__controlls {
+    display: inline-block;
+}
+
+.pagination__display {
+    margin-right: 25px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #656464;
+}
+
+.pagination__pages {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pagination__pages-item {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pagination__link {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.pagination__link.active {
+    background-color:#4b73b5;
+    color: white;
+}
+
+.pagination__prev, .pagination__next {
+    text-decoration: none;
+}
+.pagination__prev{
+    color: #bebdbd;
+    
+}
+
+.footer__container {
+    position: relative;
+    height: 76px;
+    margin-top: 60px;
+    }
+
+.footer {
+    background: #4b73b5;
+    color: white;
+}
+
+.footer__logo {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    margin-left: -60px;
+}
+
+.company-text{
+    font-size: 14px;
+    font-weight: 300;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.social__icon{
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.social__icon li {
+    margin-right: 10px;
+    float: left;
+    width:20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #d2def3;
+    text-align: center;
+    
+
+}
+
+.social__icon li:hover {
+    background-color: white;
+}
+
+.social__text{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.social {
+    float: right;
+    margin-top: 19px;
+}
+
