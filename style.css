@@ -1,4 +1,211 @@
 body{
-    height: 100vh;
-    background:blue;
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container{
+    width: 1050px;
+    margin: 0 auto;
+}
+header{
+    background: #4b73b5;
+    color: white;
+}
+.header__container {
+position: relative;
+height: 76px;
+margin-bottom: 14px;
+}
+.logo{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+.company-contacts {
+position: absolute;
+right: 0;
+top: 15px;
+text-align: right;
+}
+.company-contacts-phone{
+    font-size: 21px;
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+
+} .company-contacts__text{
+    font-size: 14px;    
+    font-weight: bold;
+    opacity: 0.7;
+    text-decoration:underline;
+}
+.page-content{
+    margin-left: 180px;
+}
+
+.sidebar {
+    float: left;
+    padding-top: 32px;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.nav__icon, .nav__title{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.nav__link{
+    text-decoration: none;
+
+}
+
+.nav__icon{
+    width: 24px;
+    height: 18px;
+    background: center center no-repeat;
+    margin-right: 19px;
+
+}
+
+.nav__icon--main{
+    background-image: url('./img/sidebar/main_icon.png');
+
+}
+.nav__icon--feed{
+    background-image: url('./img/sidebar/feed_icon.png')
+}
+.nav__icon--team{
+    background-image: url('./img/sidebar/team_icon.png')
+}
+
+
+.nav__link:hover .nav__icon--feed{
+    background-image: url('./img/sidebar/feed_icon2.png')
+}
+.nav__link:hover .nav__icon--team{
+    background-image: url('./img/sidebar/team_icon2.png')
+}
+
+.nav__item {
+    margin-bottom: 30px;
+}
+
+.nav__item--active .nav__icon--main{
+    background-image: url('./img/sidebar/main_icon.png');
+
+}
+.nav__item--active .nav__icon--feed{
+    background-image: url('./img/sidebar/feed_icon.png')
+}
+.nav__item--active .nav__icon--team{
+    background-image: url('./img/sidebar/team_icon.png')
+}
+
+.nav__item--active .nav__title{
+    color:#221f1f;
+}
+
+.nav__title{
+    letter-spacing: 2.4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #4b73b5;
+    text-transform: uppercase;
+}
+.nav__link:hover .nav__title{
+    color:#221f1f;
+}
+
+.nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix {
+    display: block;
+    clear: both;
+}
+
+.prices__block {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news__avartar{
+    float: left;
+}
+
+.prices__block-text{
+    float: left;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    outline: 1px solid red;
+    box-sizing: border-box;
+    margin-right: 16px;
+    
+}
+
+.price-icon-circle {
+    width: 72px;
+    height: 72px;
+    background: #4b73b5;
+    display: inline-block;
+    border-radius: 72px;
+    text-align: center;
+    line-height: 89px;
+}
+.route__base-name{
+    font-size: 49px;
+    font-weight: bold;
+    margin-bottom: 36px;
+    margin-top: 0px;
+}
+
+.price__heading-text{
+    font-size: 10.78px;  
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.block__desc{
+    text-align: left;
+    list-style-type: disc;
+    
+}
+.block__desc li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.price__description{
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.block__title{
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+.price-text{
+    font-weight: 400;
+    font-size: 53.89px;
+    margin-top: 20px;
+
+}
+
+.price-text small {
+    font-size: 65%;
 }
