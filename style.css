@@ -355,7 +355,7 @@ img{
     float: left;
     width:20px;
     height: 20px;
-    border-radius: 20px;
+    border-radius: 50%;
     background-color: #d2def3;
     text-align: center;
     
