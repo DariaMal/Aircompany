@@ -14,22 +14,23 @@ header{
     color: white;
 }
 .header__container {
-position: relative;
-height: 76px;
-margin-bottom: 14px;
+    position: relative;
+    height: 76px;
+    margin-bottom: 14px;
 }
 .logo{
     display: inline-block;
     position: absolute;
     left: 0;
     top: 20px;
+    
 }
 
 .company-contacts {
-position: absolute;
-right: 0;
-top: 15px;
-text-align: right;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    text-align: right;
 }
 .company-contacts-phone{
     font-size: 21px;
@@ -44,20 +45,22 @@ text-align: right;
     text-decoration:underline;
 }
 .page-content{
-    margin-left: 180px;
+    float: left;
+    width: 83%;
 }
 
 .sidebar {
     float: left;
     padding-top: 32px;
-    display: inline-block;
+    width: 17%;
+    
 }
 
 img{
     max-width: 100%;
     max-height: 100%;
 }
-.nav__icon, .nav__title{
+.nav__title{
     display: inline-block;
     vertical-align: top;
 }
@@ -67,30 +70,30 @@ img{
 
 }
 
-.nav__icon{
+.nav__icon:before{
+    content: ' ';
     width: 24px;
     height: 18px;
     background: center center no-repeat;
-    margin-right: 19px;
-
+    margin-right: 14px;
+    display: inline-block;
+    vertical-align: top;
 }
 
-.nav__icon--main{
+.nav__icon--main:before{
     background-image: url('./img/sidebar/main_icon.png');
-
 }
-.nav__icon--feed{
+.nav__icon--feed:before{
     background-image: url('./img/sidebar/feed_icon.png')
 }
-.nav__icon--team{
+.nav__icon--team:before{
     background-image: url('./img/sidebar/team_icon.png')
 }
 
-
-.nav__link:hover .nav__icon--feed{
+.nav__link:hover.nav__icon--feed:before{
     background-image: url('./img/sidebar/feed_icon2.png')
 }
-.nav__link:hover .nav__icon--team{
+.nav__link:hover.nav__icon--team:before{
     background-image: url('./img/sidebar/team_icon2.png')
 }
 
@@ -98,14 +101,18 @@ img{
     margin-bottom: 30px;
 }
 
-.nav__item--active .nav__icon--main{
+.nav__item:last-child {
+    margin-bottom: 0;
+}
+
+.nav__item--active .nav__icon--main:before{
     background-image: url('./img/sidebar/main_icon.png');
 
 }
-.nav__item--active .nav__icon--feed{
+.nav__item--active .nav__icon--feed:before{
     background-image: url('./img/sidebar/feed_icon.png')
 }
-.nav__item--active .nav__icon--team{
+.nav__item--active .nav__icon--team:before{
     background-image: url('./img/sidebar/team_icon.png')
 }
 
@@ -147,20 +154,23 @@ img{
     float: left;
     width: 250px;
     margin-right: 16px;
-}
-
-.price__item{
     padding: 40px 10px 0 10px;
     text-align: center;
     box-sizing: border-box;
 }
 
+
 .prices__block-border{
-    border: 1px solid #e8e9ed;
+    border: 1px solid transparent;
     border-radius: 5px;
 }
 
-.price-icon-circle {
+.prices__block-border:hover{
+    border-color: #e8e9ed;
+}
+
+
+.price__icon-circle {
     width: 72px;
     height: 72px;
     background: #4b73b5;
@@ -181,6 +191,7 @@ img{
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 .block__desc{
@@ -209,7 +220,7 @@ img{
     font-size: 53.89px;
     margin-top: 20px;
     margin-bottom: 30px;
-
+    text-align: center;
 }
 
 .price-text small {
@@ -234,7 +245,7 @@ img{
     clear: both;
 }
 
-.section__title {
+.news__title {
     margin-top: 60px;
     margin-bottom: 70px;
     font-size: 49px;
@@ -243,6 +254,10 @@ img{
 
 .news__item{
     margin-bottom: 58px;
+}
+
+.news__item:last-child{
+    margin-bottom: 0;
 }
 
 .news__date{
@@ -265,6 +280,8 @@ img{
 .pagination{
     text-align: center;
     vertical-align: middle;
+    margin-top: 57px;
+    margin-bottom: 60px;
 }
 
 .pagination__display, .pagination__controlls {
@@ -314,22 +331,28 @@ img{
     color: #bebdbd;
     
 }
+.pagination__next {
+    color: #242121;
+}
+  
+
 
 .footer__container {
     position: relative;
     height: 76px;
-    margin-top: 60px;
+    
     }
 
 .footer {
     background: #4b73b5;
     color: white;
+    padding-top: 15px;
 }
 
 .footer__logo {
     position: absolute;
     left: 50%;
-    top: 20px;
+    top: 15px;
     margin-left: -60px;
 }
 
@@ -337,7 +360,7 @@ img{
     font-size: 14px;
     font-weight: 300;
     display: inline-block;
-    padding-top: 10px;
+    
 }
 
 .social__icon{
@@ -374,6 +397,7 @@ img{
 
 .social {
     float: right;
-    margin-top: 19px;
+    padding-top: 10px;
+    
 }
 
