@@ -50,6 +50,7 @@ text-align: right;
 .sidebar {
     float: left;
     padding-top: 32px;
+    display: inline-block;
 }
 
 img{
