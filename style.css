@@ -103,6 +103,7 @@ img{
 
 .nav__item {
     margin-bottom: 30px;
+    line-height: 20px;
 }
 
 .nav__item:last-child {
