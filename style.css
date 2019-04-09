@@ -1,8 +1,15 @@
 body{
-    margin: 0;
     font-family: "Roboto", Arial, sans-serif;
     line-height: 1.42;
     -webkit-font-smoothing: antialiased;
+}
+
+div, input, textarea {
+    box-sizing: border-box;
+}
+
+.dflex {
+    display: flex;
 }
 
 .container{
@@ -17,19 +24,15 @@ header{
     position: relative;
     height: 76px;
     margin-bottom: 14px;
+    justify-content: space-between;
+    align-items: center;
 }
 .logo{
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 20px;
+    display: block;
     
 }
 
 .company-contacts {
-    position: absolute;
-    right: 0;
-    top: 15px;
     text-align: right;
 }
 .company-contacts-phone{
@@ -45,15 +48,12 @@ header{
     text-decoration:underline;
 }
 .page-content{
-    float: left;
-    width: 83%;
+    flex: 1;
 }
 
 .sidebar {
-    float: left;
     padding-top: 32px;
-    width: 17%;
-    
+    flex: 0 0 17%;
 }
 
 img{
@@ -85,7 +85,7 @@ img{
 }
 
 .nav__icon--main:before{
-    background-image: url('./img/sidebar/main_icon.png');
+    background-image: url('./img/sidebar/main_icon2.png');
 }
 .nav__icon--feed:before{
     background-image: url('./img/sidebar/feed_icon.png')
@@ -94,10 +94,13 @@ img{
     background-image: url('./img/sidebar/team_icon.png')
 }
 
-.nav__link:hover.nav__icon--feed:before{
+.nav__link:hover.nav__icon--main:before, .nav__item--active .nav__icon--main:before{
+    background-image: url('./img/sidebar/main_icon.png')
+}
+.nav__link:hover.nav__icon--feed:before, .nav__item--active .nav__icon--feed:before{
     background-image: url('./img/sidebar/feed_icon2.png')
 }
-.nav__link:hover.nav__icon--team:before{
+.nav__link:hover.nav__icon--team:before, .nav__item--active .nav__icon--team:before{
     background-image: url('./img/sidebar/team_icon2.png')
 }
 
@@ -113,12 +116,6 @@ img{
 .nav__item--active .nav__icon--main:before{
     background-image: url('./img/sidebar/main_icon.png');
 
-}
-.nav__item--active .nav__icon--feed:before{
-    background-image: url('./img/sidebar/feed_icon.png')
-}
-.nav__item--active .nav__icon--team:before{
-    background-image: url('./img/sidebar/team_icon.png')
 }
 
 .nav__item--active .nav__link{
@@ -150,7 +147,6 @@ img{
 
 
 .prices__block-text{
-    float: left;
     width: 250px;
     margin-right: 16px;
     padding: 40px 10px 0 10px;
@@ -231,14 +227,15 @@ img{
 
 
 
-.news__list{
+.news__list, .comments__list{
     list-style: none;
     margin: 0;
     padding: 0;
+    margin-top: 40px;
 }
-.news__avatar{
-    float: left;
+.news__avatar, .comments__avatar{
     margin-right: 17px;
+    flex: 0 0 160px;
 }
 
 .clearfix-append:after {
@@ -254,30 +251,42 @@ img{
     font-weight: bold;
 }
 
-.news__item{
+.comments__title{
+    font-size: 49px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.news__item, .comments__item{
     margin-bottom: 58px;
 }
 
 .news__item:last-child{
     margin-bottom: 0;
 }
+.comments__item:last-child{
+    margin-bottom: 0;
+}
 
-.news__date{
+.news__date, .comments__date{
     font-size: 14px;
     font-weight: 300;
     color: #656464;
 }
 
-.news__heading{
+.news__heading, .comments__, .team__name{
     font-size: 18px;
     font-weight: bold;
 }
 
-.news__desc-text{
+.news__desc-text, .comments__desc-text{
     font-size: 18px;
     font-weight: 300;
     margin-top: 12px;
 }
+
+
 
 .pagination{
     text-align: center;
@@ -342,20 +351,19 @@ img{
 .footer__container {
     position: relative;
     height: 76px;
+    justify-content: space-between;
+    align-items: center;
     
     }
 
 .footer {
     background: #4b73b5;
     color: white;
-    padding-top: 15px;
+    
 }
 
-.footer__logo {
-    position: absolute;
-    left: 50%;
-    top: 15px;
-    margin-left: -60px;
+.footer__logo { 
+   margin-left: -60px;
 }
 
 .company-text{
@@ -366,7 +374,6 @@ img{
 }
 
 .social__icon{
-    display: inline-block;
     text-decoration: none;
     vertical-align: middle;
     list-style: none;
@@ -377,13 +384,11 @@ img{
 
 .social__icon li {
     margin-right: 10px;
-    float: left;
     width:20px;
     height: 20px;
     border-radius: 50%;
     background-color: #d2def3;
-    text-align: center;    
-
+    text-align: center; 
 }
 .social__icon li:last-child{
     margin-right: 0px;
@@ -399,9 +404,242 @@ img{
     margin-bottom: 5px;
 }
 
-.social {
-    float: right;
-    padding-top: 10px;
+
+.form{
+    background: #f5f5f5;
+    padding: 30px 69px 50px 69px;
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 58px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.form__title{
+    font-size: 49px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.form__row{
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.form__block{
+    margin-right: 23px;
+    flex: 1px;
+    
+
+}
+.form__block:last-child{
+    margin-right: 0;
+
+    }
+.form__block-title, .form__check-title{
+    font-size: 14px;
+    font-weight: 400;
+}   
+
+.form-field{
+    width: 100%;
+    background: white;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.form__field::placeholder{
+    color: #ccc;
+}
+
+.form__textarea{
+    resize: vertical;
+}
+
+.form__label{
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    margin-right: 15px;
+}
+.form__button-text{
+  color: white;
+  text-decoration: none;   
+  background: #4b73b5;
+  padding: 15px 17px;
+  border-radius: 3px;
+  display: inline-block;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  cursor: pointer;
+} 
+
+.form__footer {
+    justify-content: space-between;
+}
+ 
+
+.breadcrumbs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 25px;
+}
+.breadcrumbs__item,
+.breadcrumbs__link {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.breadcrumbs__item:after {
+  content: "/";
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.breadcrumbs__item:last-child:after {
+  display: none;
+}
+
+.breadcrumbs__link {
+  font-style: italic;
+  font-size: 14px;
+  opacity: .8;
+  color:#497ccf(178, 73, 48, 0.8);
+}
+.breadcrumbs__link:visited{
+    color:#497ccf
+}
+
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: #000;
+  text-decoration: none;
+}
+
+.container__small{
+    width: 625px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight:300;
+}
+.line{
+    background-image: url(./img/line.png);
+    background-repeat: repeat-x;
+    padding: 45px 0;
+}
+
+.team__item{
+    flex: 0 0 33.33333%;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 18px;
+    box-sizing: border-box;
+    margin-bottom: 35px;
+}
+
+.team__avatar{
+    overflow: hidden;
+    width: 160px;
+    position: relative;
+    border-radius: 50%;
+    line-height: 0;
+   
+}
+
+.team__avatar:hover:before {
+    content: " ";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4b73b5;
+    opacity: 0.5;
+}
+
+.team__avatar span {
+    display: none;
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 160px;
+    text-align: center;
+}
+
+.team__avatar:hover span {
+    display: inline;
+}
+
+.team__desc{
+    text-align: center;
     
 }
+
+
+.team__list{
+    text-decoration: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.team__title, .partners__text{
+    font-size: 49px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  
+}
+.team__text{
+    font-size: 14px;
+    font-weight: 300;
+    
+}
+.team__occ{
+    color: #4b73b5;
+    font-size: 14px;
+    font-weight: 700;
+}
+.partners__icon{    
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    
+}
+.partners__icon-pic{
+    flex: 0 0 33.3%;
+    margin-bottom: 60px;
+    filter: grayscale(100%);
+}
+.partners__icon-pic:hover{
+filter: none;
+}
+
+button:after {
+    content: ' ';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(./img/Vector\ Smart\ Object.png);
+    margin-left: 10px;
+    vertical-align: text-bottom;
+}
+
 
