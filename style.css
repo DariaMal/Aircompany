@@ -275,13 +275,13 @@ img{
     color: #656464;
 }
 
-.news__heading, .comments__, .team__name{
+.news__heading, .comments__, .team__name, .comments__heading{
     font-size: 18px;
     font-weight: bold;
 }
 
 .news__desc-text, .comments__desc-text{
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 300;
     margin-top: 12px;
 }
