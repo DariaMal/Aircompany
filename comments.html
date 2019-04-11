@@ -167,7 +167,7 @@
             </div>
         </div>
 
-        <div class="form">
+        <form class="form">
             <h2 class="form__title">Оставить отзыв</h2>
             <div class="form__row">
                 <label for="" class="form__block">
@@ -188,15 +188,21 @@
             <div class="dflex form__footer">
                 <div class="form__check">
                     <div class="form__check-title">Отображать фото в отзыве?</div>
-                    <label class="form__label">Да<input type="radio" name="check" value="yes" checked></label> 
-                    <label class="form__label">Нет<input type="radio" name="check" value="no"></label>
+                    <label class="form__radio-button">
+                        <input type="radio" name="check" value="yes" checked class="form__radio-input">
+                        <div class="radio__styled"></div>Да
+                    </label> 
+                    <label class="form__radio-button">
+                        <input type="radio" name="check" value="no" class="form__radio-input">
+                        <div class="radio__styled"></div>Нет
+                    </label>
                 </div>            
                 <div class="form__button">
                     <button type="submit" class="form__button-text">Отправить</button>
                 </div>
             </div>
 
-        </div>
+        </form>
 
         <footer class="footer">
             <div class="container footer__container dflex">

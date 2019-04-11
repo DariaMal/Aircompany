@@ -225,13 +225,15 @@ img{
     font-size: 65%;
 }
 
-
+.comments, .news{
+    margin-bottom: 57px;
+}
 
 .news__list, .comments__list{
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-top: 40px;
+    
 }
 .news__avatar, .comments__avatar{
     margin-right: 17px;
@@ -245,7 +247,6 @@ img{
 }
 
 .news__title {
-    margin-top: 60px;
     margin-bottom: 70px;
     font-size: 49px;
     font-weight: bold;
@@ -255,7 +256,7 @@ img{
     font-size: 49px;
     font-weight: bold;
     margin: 0;
-    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 .news__item, .comments__item{
@@ -291,7 +292,6 @@ img{
 .pagination{
     text-align: center;
     vertical-align: middle;
-    margin-top: 57px;
     margin-bottom: 60px;
 }
 
@@ -409,8 +409,7 @@ img{
     background: #f5f5f5;
     padding: 30px 69px 50px 69px;
     width: 700px;
-    margin: 0 auto;
-    margin-top: 58px;
+    margin: 0 auto;    
     margin-bottom: 50px;
     box-sizing: border-box;
 }
@@ -418,8 +417,8 @@ img{
 .form__title{
     font-size: 49px;
     font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 20px;
+    
 }
 
 .form__row{
@@ -440,6 +439,7 @@ img{
 .form__block-title, .form__check-title{
     font-size: 14px;
     font-weight: 400;
+    margin-bottom: 5px;
 }   
 
 .form-field{
@@ -459,12 +459,43 @@ img{
     resize: vertical;
 }
 
-.form__label{
+.form__radio-button{
     cursor: pointer;
-    position: relative;
-    font-size: 14px;
+    font-size: 14px;    
     margin-right: 15px;
 }
+
+.radio__styled {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #cecece;    
+    margin-right: 10px;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.radio__styled:before {
+    content: ' ';
+    display: block;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.form__radio-button input:checked + .radio__styled {
+    border-color: #4b73b5;
+}
+
+.form__radio-button input:checked + .radio__styled:before {
+    background-color: #4b73b5;
+}
+
+.form__radio-button input {
+    display: none;
+}
+
+
 .form__button-text{
   color: white;
   text-decoration: none;   
@@ -491,6 +522,7 @@ img{
     padding: 0;
     list-style: none;
     margin-top: 25px;
+    margin-bottom: 10px;
 }
 .breadcrumbs__item,
 .breadcrumbs__link {
@@ -535,15 +567,20 @@ img{
     background-image: url(./img/line.png);
     background-repeat: repeat-x;
     padding: 45px 0;
+    margin-bottom: 58px;
 }
 
 .team__item{
-    flex: 0 0 33.33333%;
+    flex: 0 0 31%;
     flex-direction: column;
-    align-items: center;
-    padding-right: 18px;
+    align-items: center;   
     box-sizing: border-box;
     margin-bottom: 35px;
+    margin-right: 28px;
+
+}
+.team__item:nth-child(3n){
+    margin-right: 0px;
 }
 
 .team__avatar{
@@ -602,8 +639,7 @@ img{
     font-size: 49px;
     font-weight: bold;
     margin: 0;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   
 }
 .team__text{
@@ -641,5 +677,3 @@ button:after {
     margin-left: 10px;
     vertical-align: text-bottom;
 }
-
-
