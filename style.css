@@ -438,6 +438,9 @@ margin-bottom: 40PX;
     text-decoration: none;
     color: black;
 }
+.pagination__link:hover{
+    color:#1c5bc3;
+}
 
 .pagination__link.active {
     background-color:#4b73b5;
