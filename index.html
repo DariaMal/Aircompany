@@ -20,14 +20,72 @@
                 </a>
                 <div class="company-contacts">
                     <a href="tel:+78000039210" class="company-contacts-phone"> 8 (800) 00-392-10 </a>
-                    <div class="company-contacts__text">График работы </div>
+                    <div class="dropdown">
+                        <a a href="#" class="dropdown__link">График работы </a>
+                        <div class="dropdown__menu">
+                            <div class="dropdown__menu_card">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__list-text-blue"><b>пн-вс: 9:00-20:00</b></li>
+                                    <li class="dropdown__list-text">обед 14:00-14:30</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
 
         </header>
         <div class="container dflex">         
             <aside class="sidebar">
-                <ul class="nav">
+                <div class="prices__block prices__block-border">
+                    <h3 class="prices__block-text">Топ-тариф</h3>
+                    <h5 class="price__heading-text">Стандарт</h5>
+                    <div class="price__description">
+                        <div class="block__title">
+                            Создан для вашего комфортоного отдыха
+                        </div>
+                        <ul class="block__desc">
+                            <li>Питание включено</li>
+                            <li>Багаж (5 кг)</li>
+                            <li>Детское кресло</li>
+                        </ul>
+                    </div>                                            
+                    <p class="price-text">
+                        <small>$</small>19
+                    </p>                           
+                </div>
+
+                <div class="text-center">
+                    <div class="social">
+                        <div class="social__text">
+                            Наши социальные сети
+                        </div>
+                        <ul class="social__icon dflex">
+                            <li>
+                                <a href="#" class="social__link social__link-vk"> </a>                                
+                            </li>
+                            <li>
+                                <a href="#" class="social__link social__link-fb"></a>                            
+                            </li>
+                            <li>
+                                <a href="#" class="social__link social__link-google"></a>                            
+                            </li>
+                            <li>
+                                <a href="#" class="social__link social__link-tw"></a>                            
+                            </li>
+                            <li>
+                                <a href="#" class="social__link social__link-mail"> </a>                            
+                            </li>
+                            
+                        </ul>
+                            
+                    </div>
+                </div>
+                
+            </aside>      
+            <div class="page-content">
+                <ul class="nav dflex">
                     <li class="nav__item nav__item--active">
                         <a href="#" class="nav__link nav__icon nav__icon--main">
                             Главная
@@ -43,90 +101,16 @@
                             Экипаж
                         </a>
                     </li>
-
+        
                 </ul>
-
-            </aside>      
-            <div class="page-content">
+        
                 <section class="page__preview">
                     <img src="./img/air.png" alt="" class="page__preview-img">
                 </section>
 
-                <section class="prices">
-                    <h2 class="prices__base-name">Тарифы</h2>
-                    <ul class="prices__block dflex">
-                        <li class="prices__block-text prices__block-border">                          
-                            <div class="price__icon-circle text-center">
-                                <img src="./img/feauteres/flower.png" alt="">                                                
-                            </div>
-                                
-                            <h5 class="price__heading-text">Стандарт</h5>
-                                
-                            <div class="price__description">
-                                <div class="block__title text-center">
-                                    Создан для вашего комфортоного отдыха
-                                </div>
-
-                                <ul class="block__desc">
-                                    <li>Питание включено</li>
-                                    <li>Багаж (5 кг)</li>
-                                    <li>Детское кресло</li>
-                                </ul>
-                            </div>                                            
-                            <p class="price-text">
-                                <small>$</small>19
-                            </p>                                       
-                        </li>
-                        <li class="prices__block-text prices__block-border">
-                            <div class="price__icon-circle text-center">
-                                <img src="./img/feauteres/star.png" alt="">                                                    
-                            </div>
-                                
-                            <h5 class="price__heading-text">Премиум</h5>
-                                
-                            <div class="price__description">
-                                <div class="block__title text-center">
-                                    Для любителей<br>хороших впечатлений</br>
-                                </div>
-
-                                <ul class="block__desc">
-                                    <li>Питание включено</li>
-                                    <li>Багаж (5 кг)</li>
-                                    <li>Детское кресло</li>
-                                </ul>
-                            </div>                                            
-                                <p class="price-text">
-                                    <small>$</small>39
-                                </p>                                            
-                        </li>
-                        <li class="prices__block-text prices__block-border">
-                            <div class="price__icon-circle text-center">
-                                <img src="./img/feauteres/painter-palette.png" alt="">                                                
-                            </div>
-                                
-                            <h5 class="price__heading-text">Лакшери</h5>
-                                
-                            <div class="price__description">
-                                <div class="block__title text-center">
-                                    Всё самое лучшее и незабываемое
-                                </div>
-
-                                <ul class="block__desc">
-                                    <li>Питание включено</li>
-                                    <li>Багаж (5 кг)</li>
-                                    <li>Детское кресло</li>
-                                </ul>
-                            </div>                                            
-                            <p class="price-text">
-                                <small>$</small>99
-                            </p>                                            
-                        </li>
-                    </ul>
-                </section>
-
                 <section class="news">
                     <h2 class="news__title">Последние новости</h2>
-                    <ul class="news__list">
+                    <ul class="news__list dflex">
                         <li class="news__item dflex">
                             <div class="news__avatar">
                                 <img src="./img/news/Ellipse 1-2.png" alt="" class="news__avatar-pic">
@@ -221,40 +205,7 @@
                 <a href="#" class="footer__logo">
                     <img class="logo__picture" src="./img/logo/logo.png" alt="">
                 </a>
-                <div class="social">
-                    <div class="social__text">
-                        Наши социальные сети
-                    </div>
-                   <ul class="social__icon dflex">
-                        <li>
-                            <a href="#" class="social__link">
-                                <img src="./img/social/vk.png" alt="" class="icon__picture">
-                            </a>                                
-                        </li>
-                        <li>
-                            <a href="#" class="social__link">
-                                <img src="./img/social/facebook.png" alt="" class="icon__picture">
-                            </a>                            
-                        </li>
-                        <li>
-                            <a href="#" >
-                                <img src="./img/social/google.png" alt="" class="icon__picture">
-                            </a>                            
-                        </li>
-                        <li>
-                            <a href="#" class="social__link">
-                                <img src="./img/social/twitter.png" alt="" class="icon__picture">
-                            </a>                            
-                        </li>
-                        <li>
-                            <a href="#" social__link>
-                                <img src="./img/social/mail.png" alt="" class="icon__picture">
-                            </a>                            
-                        </li>
-                    
-                   </ul>
-                    
-                </div>
+                
 
                     
             </div>
