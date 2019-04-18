@@ -17,7 +17,7 @@ div, input, textarea {
 }
 
 .container{
-    width: 1050px;
+    width: 1160px;
     margin: 0 auto;
 }
 header{
@@ -128,8 +128,8 @@ header{
 }
 
 .sidebar {
-    padding-right: 25px;
-    flex: 0 0 25%;
+    padding-right: 22px;
+    flex: 0 0 273px;
 }
 
 img{
@@ -708,17 +708,18 @@ button:hover:after {
 
 .container__small{    
     margin: 0 auto;
+    
+}
+.alert{
+    background-image: url(./img/line.png);
+    padding: 25px 10px;
+    margin-bottom: 30px;
     font-size: 16px;
     color: #ffffff;
     font-weight:300;
     text-align: center;
     line-height: 30px;
-}
-.line{
-    background-image: url(./img/line.png);
-    padding: 25px 10px;
-    margin-bottom: 30px;
-    background-repeat: repeat-y;
+    
 }
 
 .team__item{
