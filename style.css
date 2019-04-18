@@ -896,8 +896,9 @@ button:hover:after {
 
 .welcome__center-block{
     flex-direction: column;
-    /*transform: scale(0);*/
     animation: translate 1s 1s cubic-bezier(.46,1.29,1,.83);
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 
@@ -964,6 +965,9 @@ button:hover:after {
         transform: translateY(0);
     }
 
-
+    100% {
+        opacity: 1; 
+        transform: translateY(0);
+    }
 
 }
