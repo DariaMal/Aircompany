@@ -147,7 +147,7 @@ img{
     font-weight: bold;
     color: #4b73b5;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: color 0.1s ease;
 }
 
 .nav__icon:before{
@@ -896,7 +896,11 @@ button:hover:after {
 
 .welcome__center-block{
     flex-direction: column;
+    /*transform: scale(0);*/
+    animation: translate 1s 1s cubic-bezier(.46,1.29,1,.83);
 }
+
+
 
 .welcome__logo{
     margin-bottom: 35px;
@@ -935,4 +939,31 @@ button:hover:after {
 
 .welcome__enter-btn:hover:after{
     background-image: url(./img/Vector\ Smart\ Object.png);
+}
+
+@keyframes translate{
+    0% {
+        opacity: 0;
+        transform: translateY(0);        
+    }
+
+    30% {
+       opacity: 1; 
+       transform: translateY(-30px);
+    }
+
+    40% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(-15px);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+
+
+
 }
