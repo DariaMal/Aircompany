@@ -48,19 +48,19 @@
                             Наши социальные сети
                         </div>
                         <ul class="social__icon dflex">
-                            <li>
+                            <li class="social__icon-pic">
                                 <a href="#" class="social__link social__link-vk"> </a>                                
                             </li>
-                            <li>
+                            <li class="social__icon-pic">
                                 <a href="#" class="social__link social__link-fb"></a>                            
                             </li>
-                            <li>
+                            <li class="social__icon-pic">
                                 <a href="#" class="social__link social__link-google"></a>                            
                             </li>
-                            <li>
+                            <li class="social__icon-pic">
                                 <a href="#" class="social__link social__link-tw"></a>                            
                             </li>
-                            <li>
+                            <li class="social__icon-pic">
                                 <a href="#" class="social__link social__link-mail"> </a>                            
                             </li>
                                     
@@ -190,47 +190,48 @@
                         <a href="#" class="pagination__next">></a>
                     </div>
                 </section>
+
+                <form method="get" class="form">
+                    <h2 class="form__title">Оставить отзыв</h2>
+                    <div class="form__row">
+                        <label for="" class="form__block">
+                            <div class="form__block-title">Ваше имя</div>
+                            <input type="text" placeholder="Андрей" class="form__input form-field">
+                        </label>
+                        <label for="" class="form__block">
+                            <div class="form__block-title">Ссылка на профиль VK</div>
+                            <input type="text" placeholder="vk.com/example" class="form__input form-field">
+                        </label>                
+                    </div>
+                    <div class="form__row">
+                        <label for="" class="form__block">
+                            <div class="form__block-title">Текст отзыва</div>
+                            <textarea name="" class="form__textarea form-field"></textarea>
+                        </label>                            
+                    </div>
+                    <div class="dflex form__footer">
+                        <div class="form__check">
+                            <div class="form__check-title">Отображать фото в отзыве?</div>
+                            <label class="form__radio-button">
+                                <input type="radio" name="check" value="yes" checked class="form__radio-input">
+                                <div class="radio__styled"></div>Да
+                            </label> 
+                            <label class="form__radio-button">
+                                <input type="radio" name="check" value="no" class="form__radio-input">
+                                <div class="radio__styled"></div>Нет
+                            </label>
+                        </div>            
+                        <div class="form__button">
+                            <button type="submit" class="form__button-text">Отправить</button>
+                        </div>
+                    </div>
+        
+                </form>
+
             </div>
 
         </div>
 
-        
-        <form method="get" class="form">
-            <h2 class="form__title">Оставить отзыв</h2>
-            <div class="form__row">
-                <label for="" class="form__block">
-                    <div class="form__block-title">Ваше имя</div>
-                    <input type="text" placeholder="Андрей" class="form__input form-field">
-                </label>
-                <label for="" class="form__block">
-                    <div class="form__block-title">Ссылка на профиль VK</div>
-                    <input type="text" placeholder="vk.com/example" class="form__input form-field">
-                </label>                
-            </div>
-            <div class="form__row">
-                <label for="" class="form__block">
-                    <div class="form__block-title">Текст отзыва</div>
-                    <textarea name="" class="form__textarea form-field"></textarea>
-                </label>                            
-            </div>
-            <div class="dflex form__footer">
-                <div class="form__check">
-                    <div class="form__check-title">Отображать фото в отзыве?</div>
-                    <label class="form__radio-button">
-                        <input type="radio" name="check" value="yes" checked class="form__radio-input">
-                        <div class="radio__styled"></div>Да
-                    </label> 
-                    <label class="form__radio-button">
-                        <input type="radio" name="check" value="no" class="form__radio-input">
-                        <div class="radio__styled"></div>Нет
-                    </label>
-                </div>            
-                <div class="form__button">
-                    <button type="submit" class="form__button-text">Отправить</button>
-                </div>
-            </div>
-
-        </form>
 
         <footer class="footer">
             <div class="container footer__container dflex">
